@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Review Detector</title>
+</head>
+<body>
+    <h1>🕵️‍♂️ Fake Review Detector</h1>
+
+    <form action="/predict" method="post">
+        <textarea name="review" rows="5" cols="50" placeholder="Enter your review here..."></textarea><br>
+        <button type="submit">Detect</button>
+    </form>
+
+    {% if review and prediction %}
+        <h3>Review: {{ review }}</h3>
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
+
